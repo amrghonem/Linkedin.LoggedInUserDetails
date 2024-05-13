@@ -1,0 +1,22 @@
+﻿@model LinkedINUserInfo
+@{
+    ViewData["Title"] = "LinkedIN User Details";
+}
+
+<div class="row">
+    <div class="col-6 text-center">
+  
+        <div class="card" style="width:400px">
+            <img class="card-img-top" src="@Model.Image" alt="Card image">
+            <div class="card-body">
+                <h4 class="card-title">@Model.Name</h4>
+                <form action="/Home/OverlayedInfo">
+                    <input type="hidden" name="path" value="@Model.Image" />
+                    <input type="hidden" name="name" value="@Model.Name" />
+                    <button  class="btn btn-primary">Save With Overlay Background</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
